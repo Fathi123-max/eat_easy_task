@@ -42,7 +42,6 @@ A Flutter application for browsing and discovering movies, leveraging the TMDb A
 
 ## Screenshots
 
-*(Include screenshots or GIFs of your app here. Use descriptive captions)*
 
 <img src="https://github.com/user-attachments/assets/237455eb-9bdc-4877-8104-0279501f312b" width="300" alt="Screenshot 1">
 <img src="https://github.com/user-attachments/assets/46d1ba10-2ede-4498-bfb3-2fd214bcf6e9" width="300" alt="Screenshot 2">
@@ -69,7 +68,7 @@ A Flutter application for browsing and discovering movies, leveraging the TMDb A
 2. Navigate to the project directory:
 
    ```bash
-   cd movie_app
+   cd eat_easy_task
    ```
 
 3. Install dependencies:
@@ -129,6 +128,4 @@ The app implements centralized error handling using a custom error interceptor i
 The app uses `hive` and `dio_cache_interceptor_hive_store` for caching API responses, enabling offline access to recently viewed data and improving performance.
 
 
-
-
-Feel free to customize the placeholders (e.g., GitHub username, repository name, contact details) with actual data!
+# Thanks For Time 
