@@ -55,7 +55,6 @@ A Flutter application for browsing and discovering movies, leveraging the TMDb A
 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install) (version >= 3.0.0)
 - [Android Studio](https://developer.android.com/studio) or [Xcode](https://developer.apple.com/xcode/) (for mobile development)
-- [CMake](https://cmake.org/download/) and GTK development libraries (for Linux development)
 
 ### Installation
 
@@ -90,6 +89,59 @@ The app follows a layered architecture:
 - **Presentation Layer:** Contains UI widgets, pages, and BLoCs.
 - **Domain Layer:** Defines use cases and business logic.
 - **Data Layer:** Handles data fetching from remote APIs and local storage.
+
+
+```
+lib
+├── main.dart
+├── core
+│   ├── di
+│   │   ├── modules
+│   │   │   ├── network_module.dart
+│   │   │   └── database_module.dart
+│   │   └── injection_container.dart
+│   ├── error
+│   │   └── failures.dart
+│   ├── constants
+│   │   └── api_constants.dart
+│   ├── routes
+│   │   └── app_router.dart
+│   └── theme
+│       └── app_theme.dart
+└── features
+    └── movies
+        ├── domain
+        │   └── repositories
+        │       └── movie_repository.dart
+        ├── data
+        │   ├── repositories
+        │   │   └── movie_repository_impl.dart
+        │   ├── models
+        │   │   ├── movie_model.dart
+        │   │   ├── movie_model.g.dart
+        │   │   ├── person_model.dart
+        │   │   └── person_model.g.dart
+        │   └── datasources
+        │       ├── movie_local_data_source.dart
+        │       └── movie_remote_data_source.dart
+        └── presentation
+            ├── bloc
+            │   ├── movie_list_bloc.dart
+            │   ├── movie_list_event.dart
+            │   └── movie_list_state.dart
+            ├── widgets
+            │   ├── animated_watchlist_button.dart
+            │   ├── animated_movie_card.dart
+            │   ├── animated_favorite_button.dart
+            │   ├── staggered_movie_grid.dart
+            │   ├── horizontal_movie_list.dart
+            │   ├── move_cridits.dart
+            │   ├── shimmer_placeholder.dart
+            │   └── shimmer_placeholder.dart
+            └── pages
+                ├── movie_list_page.dart
+                └── movie_details_page.dart
+```
 
 ## State Management
 
